@@ -262,7 +262,7 @@ extern bool pwmSerialDefined;
 #define Regulatory_Domain_ISM_2400 1
 // ISM 2400 band is in use => undefine other requlatory domain defines
 #undef Regulatory_Domain_AU_915
-#undef Regulatory_Domain_EU_868
+#undef Regulatory_Domain_EU_800
 #undef Regulatory_Domain_IN_866
 #undef Regulatory_Domain_FCC_915
 #undef Regulatory_Domain_AU_433
@@ -272,11 +272,11 @@ extern bool pwmSerialDefined;
 
 #elif defined(RADIO_SX127X)
 #if !(defined(Regulatory_Domain_AU_915) || defined(Regulatory_Domain_FCC_915) || \
-        defined(Regulatory_Domain_EU_868) || defined(Regulatory_Domain_IN_866) || \
+        defined(Regulatory_Domain_EU_800) || defined(Regulatory_Domain_IN_866) || \
         defined(Regulatory_Domain_AU_433) || defined(Regulatory_Domain_EU_433) || \
         defined(Regulatory_Domain_US_433) || defined(Regulatory_Domain_US_433_WIDE) || \
         defined(UNIT_TEST))
-#error "Regulatory_Domain is not defined for 900MHz device. Check user_defines.txt!"
+#error "Regulatory_Domain is not defined for 800MHz device. Check user_defines.txt!"
 #endif
 #else
 #error "Either RADIO_SX127X or RADIO_SX128X must be defined!"
